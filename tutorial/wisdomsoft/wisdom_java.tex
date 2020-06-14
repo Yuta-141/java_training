@@ -1,0 +1,327 @@
+\documentclass[12pt,a4j,twoside]{jsbook}
+\usepackage{amsmath,amssymb}
+\usepackage{mathrsfs}
+\usepackage{listings,jvlisting,jlisting}
+\title{
+{\Large Java研修　WisdomsSoft\\}
+{\small http://www.wisdomsoft.jp/1.html}
+}
+\author{石井裕太}
+% \date{\Large 2020年2月}
+\pagestyle{headings}
+\oddsidemargin 23pt
+\evensidemargin 18pt
+\renewcommand{\bibname}{参考文献}
+\newtheorem{thm}{定理}[section]
+\newtheorem{lem}[thm]{補題}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\vspace*{3cm}
+% \begin{center}
+% {\Large 筑波大学大学院博士前期課程 \\[1cm]
+% 数理物質科学研究科修士論文} \\[3.5cm]
+% \huge 修士論文題目 \\[6cm]
+% \Large 石井裕太 \\
+% (数学専攻) \\[1cm]
+% 指導教員 佐垣大輔
+% \end{center}
+\tableofcontents
+\clearpage
+\renewcommand{\thepage}{\roman{page}}
+% \section*{序文}
+% \addcontentsline{toc}{section}{序文}
+
+% 修士論文序文
+
+\clearpage
+\chapter{JavaとJava言語}
+\section{Java仮想マシン}
+\subsection{なぜ、今Javaなのか}
+
+Java...Sun Microsystems社が開発
+
+\begin{itemize}
+    \item Java...システムとして
+    \item Java言語... 言語として
+\end{itemize}
+Java言語で開発されたソフトウェアは、Javaがサポートされている全ての環境で実行可能
+\begin{itemize}
+    \item C,C++　など　コンパイラ言語
+    \item BASIC,Perl...インタプリタ言語
+\end{itemize}
+\subsection{どこでも動くJavaの秘密}
+コンパイルの流れ：ソースファイル→コンパイラ→オブジェクトファイル→リンカ→実行可能ファイル
+
+インタプリタの流れ：ソースファイル→インタプリタ→実行
+
+Java：ソースファイル→コンパイラ→Javaバイトコード→仮想マシン→実行
+
+
+\section{オブジェクト指向}
+\subsection{オブジェクトの役割}
+高水準言語は、手続き型と非手続き型に分類される
+
+-   手続き型
+
+命令手順を記述して問題を解決するアプローチ
+C,Pascal,FORTRANなど
+
+-   非手続き型
+
+手順ではなく必要な情報を与えることで問題を解決するアプローチ
+LISP,Prologなど
+
+
+Javaは、非手続き型に属するオブジェクト指向型に分類される。
+これは、プログラムの流れではなく、オブジェクトの役割に注目している
+
+\subsection*{継承と抽象化}
+これまでのプログラマは、プログラムを組むときに流れを意識
+\begin{itemize}
+    \item 順番に命令が実行される逐次
+    \item 条件によって命令が選択される分岐
+    \item 条件が満たされるまで繰り返す反復
+\end{itemize}
+CPUはこれらの計算を延々と繰り返している。
+一方、オブジェクト指向はこのような流れよりもプログラムを部品化して独立させることに注目する。
+
+正しく部品化されたプログラムは他のプログラムコードの影響を受けない。このような状態をプログラムの独立性として評価される。
+
+オブジェクト指向プログラミングでは、プログラムの部品をオブジェクト（物）として考える。
+実行手順ではなく、役割を与えられたオブジェクトを部品として開発し、最終的にオブジェクトを結びつけ、それぞれのオブジェクトが
+関係し合うことによって目的が達成される。
+
+\begin{itemize}
+    \item 継承　\quad 既存プログラムが提供する提供する機能を引き継ぎ、拡張することができる機能。抽象→具体的な実装という流れでプログラムを設計できる。
+    \item 多様性　\quad 目的を達成する達成するための方法にバラエティを持たせる手段。
+    \item カプセル化 \quad プログラムのオペレーションを帰省すること。外部に公開する必要のない内部事情のコードを隠蔽し、プログラムを利用する人間に必要なコードだけを公開できる。
+\end{itemize}
+\section{プログラミング言語Java}
+\subsection{Javaの誕生と歴史}
+家電製品市場のアプリケーション開発のため、プラットフォームに依存しない開発システムが求められた。
+まず、Oakが開発される。しかし、成功の目を見ることなく、製品名をJavaに変更。
+
+Javaの開発環境JDK(Java Development Kit)はSun MicrosystemsのWebサイトから無償でダウンロードでき、誰もが自由に使える。
+\subsubsection*{JDK1.0}
+\begin{itemize}
+    \item アプレットなどを中心に、クライアント側のネットワーク関連ソフトウェアや、小規模なGUIプログラミング、コマンドラインで利用する変換プログラムや圧縮、暗号などの研究プログラムに利用可能。
+    \item 当時は完成度が不十分で、標準ライブラリが提供する昨日も貧弱
+\end{itemize}
+
+その後、サーヴレットやJDBCと呼ばれるAPIの普及により、サーバー側のネットワーク関連ソフトウェアやデータベース関連ソフトウェアが注目を集める。
+セキュリティシステムも堅牢で、国際プログラムを得意とし、ビジネスの世界で支持されている。
+\subsubsection*{JDK1.2}
+\begin{itemize}
+    \item Swingと呼ばれるGUI(Graphical User Interface)コンポーネントが登場し、クライアント側のソフトウェア開発で注目される。
+    \item Javaの動作は遅かったが、マシンの高速化とJava技術の工場により十分採用できる範囲になった。
+    \item 携帯コンピュータや携帯電話も発達し、これらに実装するアプリケーションとしてもJavaが流行った。
+\end{itemize}
+\subsubsection*{JDK1.3,JDK1.4}
+\begin{itemize}
+    \item マルチメディアの分野でもJavaが実用可能な範囲になってきた。
+    \item XML,サウンド、イメージなどの高度な入出力をサポートするAPIが新たに実装。
+    \item 今後はゲーム開発、音楽編集、動画関連ソフトウェアにも期待
+\end{itemize}
+現在もJavaは安定しているとは言えず、改良と拡張を繰り返してJavaha進化し続けている。
+
+\subsection{Javaを学ぶ}
+オブジェクト指向型言語であるJavaはプログラムの流れでなく、部品としての役割を重視して目的のソフトウェアを構築していく。
+しかしオブジェクト指向プログラミングには高度な設計力が必要となる。
+
+Java言語のようなオブジェクト指向型の開発は、C言語のような手続き型とは異なり、
+巨大なソリューションの小さな部品を開発するという性質をもつ。
+このためオブジェクト指向は大規模な開発に向いている。
+大規模な開発には、設計図が必要
+
+\section{開発環境とコンパイラ}
+\subsection{Java SDK}
+Javaプラットフォーム専用のアプリケーションを開発するためには、Javaバイトコードを生成しなければならない。
+JavaにとってはJavaバイトコードこそが機械語であり実行データ。
+
+Javaバイトコードを生成するためには、C/C++言語などによる開発と同様、高水準言語を用いて開発する方法が用いられる。
+Javaバイトコードを生成するための戦勝の高水準言語がJava言語。
+Java言語のコンパイラはJDKに付属している。
+\chapter{初めてのJava言語}
+\section{初めてのJava言語}
+\subsection{最初のプログラム}
+Java言語はC言語のような手続き型言語とは異なり、ルーチンや関数といったプログラムコードの集積ではなく、
+何らかの役割を持った小さな部品単位で開発し、それらを組み立ててシステムを構築する。
+
+このときの部品をオブジェクト指向ではクラスと呼んでいる。Javaのあらゆるコードはクラスの中に属し、
+様々なクラスの関係によって１つのシステムが実現する。
+プログラムの流れは、クラスの動作として記述し、Java言語ではクラスの動作のことをメソッドと呼ぶ。
+
+オブジェクト指向プログラミングは手順ではなく役割単位で設計を行うため、
+実世界のような複雑な構造をもつオブジェクトを表現できる。
+
+\subsection{文字を表示する}
+\begin{lstlisting}
+    System.out.print("表示する文字列");
+    System.out.println("表示する文字列");
+\end{lstlisting}
+Javaの標準クラスライブラリが様々な機能を提供することで、システムを隠蔽する。
+文字表示はSystemクラスの機能を使って文字を表示する
+\section{コメント}
+\subsection{注釈を残す}
+プログラムを改変する必要があるとき、オープンソースなど共同作業の場合など、
+開発者以外の人がソースコードを読む際の理解の手助けにする
+\begin{lstlisting}
+    /* 注釈テキスト*/
+    // 注釈テキスト
+\end{lstlisting}
+
+\section{字句変換とUnicode}
+\subsection{Unicodeエスケープ}
+コンピュータの世界では文字も二進数として表現されている。
+国際的にどのコンピュータでも文字データは統一して扱うことができるように
+規格が定められた。これがいわゆる文字コードである。
+
+\subsubsection*{１バイトコード}
+\begin{itemize}
+    \item ASCIIコード(American Standard Code for Infomation Interchange)    ANSI(American National Standard Institute)米国規格協会が制定
+\end{itemize}
+しかし、日本語、中国語など文字の種類が多い言語には対応できない。
+そこで各国独自の文字コードが誕生。
+\begin{itemize}
+    \item JIS
+    \item Shift JIS
+    \item 日本語EUC
+\end{itemize}など
+
+文字コードの乱立が問題となり、MicrosoftやIBMなどの米国企業が中心となって提唱したのがUnicode。
+ISO(International Organization for Standardizatio 国際標準化機構)で国際規格ISO/IEC 10646の一部として標準化されている。
+ASCIIと異なり、全ての文字を２バイトで表現。
+
+Javaはどこでも動くのは、マシン環境だけでなく、世界の様々な国の言語環境もUnicodeで記述することによって解決している。
+Java言語はASCIIだけでプログラムできるように設計されている。
+
+\subsubsection*{Unicodeエスケープ}
+\begin{lstlisting}
+    \u****
+    "\u732B\u304C\u597D\u304D" →猫が好き
+\end{lstlisting}
+\section{トークン}
+\subsection{Java言語の基本構造}
+コンパイラは、文字の並びを頭から順に解析して機械語(Javaの場合はバイトコード)へと変換しているにすぎない。
+\begin{enumerate}
+    \item まずUnicodeエスケープを検索してUnicode文字に変換する。
+    \item 次に行末記号の分析が開始される。
+    \item Unicodeエスケープと行末文字を処理した最終的な結果を入力要素と呼ぶ。
+    \item ソースプログラムは入力要素へと還元され、さらに入力要素はトークンへと分解される。
+    \item トークン：空白とコメントを除いた入力要素、ソースプログラムの最小単位
+\end{enumerate}
+\section{文}
+\subsection{文を完成させる}
+トークンとは、英文に置ける英単語だが、英単語だけでは意味は伝わらない。
+複数のトークンを正しく組み合わせて何をやりたいのかを伝えなければならない。
+\begin{itemize}
+    \item ブロック
+    \item 空文
+    \item 式文
+    \item ローカル変数宣言文
+    \item if文
+    \item switch文
+    \item while文
+    \item do文
+    \item for文
+    \item break文
+    \item continue文
+    \item return文
+    \item throw文
+    \item synchronized文
+    \item try文
+    \item 到達不能文
+\end{itemize}
+\subsubsection*{空文}
+\begin{lstlisting}
+    ;
+\end{lstlisting}
+何もせずに常に正常終了させることが保証されている。
+\section{変数と型}
+\subsection{情報を保存する}
+プログラミングでは、与えられた情報を決められた手順で分析、加工して出力するということが基本原理。
+その過程で必要な情報を保存することは極めて重要。
+保存といっても、いちいち記録ディスクに保存しているとプログラムは遅くて使い物にならない。
+
+通常、プログラムが稼働中に必要な情報を保存するときは、主記憶装置に対して入出力が行われる。
+Javaはどこでも動くという思想から、プログラマが実装システムの記録装置を意識する必要が内容に設計されているので、主記憶装置の扱いを意識する必要はない。
+
+プログラム言語ではデータの保存には\textbf{変数}を用いる。
+変数は主記憶装置の記録場所の代名詞。
+プログラマはこの変数に情報を保存したり、保存した情報を引き出したりすることができる。
+
+情報の保存のもう一つの大きな問題として、保存されている情報が計算用の数値なのか、表示する文字なのかの識別方法はどうなるか。
+
+機械語レベルでは開発者の自己責任。
+どちらとして扱ってもいいが、人間のミスによりバグが発生しうる。
+
+Javaは保存された情報の種類の管理を行ってくれる。この管理を行うための情報を\textbf{型}と呼ぶ。
+
+Java言語の設計者たちは仕様書の中で
+「Javaは強く型づけされた言語である」と表現している。
+
+
+\subsection{ローカル変数宣言文}
+変数の利用には、メソッド内で\textbf{ローカル変数宣言文}を使う。
+ローカル変数はメソッド内でしか宣言することができず、メソッドが終了すると破棄される。
+\subsection{識別子}
+ローカル変数宣言文では、肩を表すキーワードと変数の名前を設定しなければならない。
+Java言語ではこのような、何らかの実態を認識するための名前を識別子と呼ぶ。
+識別子は自由に設定できるが、Java言語が定める命名規則に従わなければならない。
+Java言語では、識別子はJava文字とJava数字の並びであると定義している。
+\subsubsection*{Java文字}
+ASCII文字のアルファベットA-Z(\textbackslash u0041-\textbackslash u005A),
+a-z(\textbackslash u0061-\u007A)、ASCIIのアンダーライン\_ (\textbackslash u005F)とドル記号\$(\textbackslash u0024)のことを表す。
+
+\subsubsection*{Java数字}
+ASCIIの0-9(\textbackslash u0030-\textbackslash u0039)までの数字を含むUnicode文字。
+
+ただし、識別子の先頭１文字はJava文字でなくてはならない。
+\subsection{確実な代入}
+Java言語ではローカル変数宣言文で宣言された変数は、その値がアクセスされるまでに必ず値が保持されていなければならない。これを\textbf{確実な代入}と呼ぶ。
+コンパイラは変数のアクセスを認識すると、厳密な手順の解析を行って確実な代入状態であるか調べる。
+値が保持されていることが保証できない場合、コンパイル・エラーを発生させる。
+
+\subsection{変数宣言子}
+\subsubsection*{変数宣言}
+\begin{lstlisting}
+    型　変数宣言子, 変数宣言子...;
+\end{lstlisting}
+\subsection{名前つけ規約}
+Java言語ではソースの可読性を高めるために変数の識別子に対して名前つけ規約を定めている。
+
+変数は、意味のある名前を省略した、単語とならない短い小文字の並びであるべきとされる。
+% \begin{example}
+    \begin{itemize}
+        \item temp:ごく一時的な利用に限られた変数
+        \item val:値を保持する
+    \end{itemize}
+% \end{example}
+原則として１文字の変数は推奨されない。しかし、一時てきな利用や汎用的な利用をされる変数であれば、
+変数型を連想させる文字を採用するような規約が定められている。
+\begin{table}
+    \begin{tabular}{|l|l|} \hline
+        型　& １文字識別子\\ \hline
+        byte & b \\
+        byte以外の整数型　& i,j,k \\
+        char & c\\
+        float & f\\
+        double & d \\
+        long & l \\
+        String & s \\ \hline
+    \end{tabular} 
+\end{table}
+\begin{thebibliography}{9}
+
+\addcontentsline{toc}{chapter}{参考文献}
+
+\bibitem{WisdomSoft}
+赤坂玲音,
+読本Java 2011/11/14 毎日コミュニケーションズ
+http://www.wisdomsoft.jp/1.html
+\end{thebibliography}
+
+\end{document}
+
+
