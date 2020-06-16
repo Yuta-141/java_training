@@ -28,5 +28,12 @@
 \contentsline {subsection}{\numberline {2.6.4}確実な代入}{xiii}%
 \contentsline {subsection}{\numberline {2.6.5}変数宣言子}{xiii}%
 \contentsline {subsection}{\numberline {2.6.6}名前つけ規約}{xiii}%
-\contentsline {chapter}{参考文献}{xv}%
-\contentsline {chapter}{参考文献}{xv}%
+\contentsline {section}{\numberline {2.7}リテラル}{xiv}%
+\contentsline {subsection}{\numberline {2.7.1}整数リテラル}{xiv}%
+\contentsline {subsection}{\numberline {2.7.2}浮動小数点数リテラル}{xv}%
+\contentsline {subsection}{\numberline {2.7.3}文字と文字列リテラル}{xv}%
+\contentsline {subsection}{\numberline {2.7.4}エスケープ・シーケンス}{xv}%
+\contentsline {subsection}{\numberline {2.7.5}審議リテラル}{xvi}%
+\contentsline {subsection}{\numberline {2.7.6}nullリテラル}{xvi}%
+\contentsline {chapter}{参考文献}{xvii}%
+\contentsline {chapter}{参考文献}{xvii}%

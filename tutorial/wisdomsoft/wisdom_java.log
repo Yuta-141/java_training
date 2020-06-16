@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.11.29)  14 JUN 2020 20:09
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.11.29)  16 JUN 2020 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -278,20 +278,25 @@ Underfull \hbox (badness 3240) in paragraph at lines 182--183
  []
 
 [10] [11] [12] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 320--323
+Overfull \hbox (1.0687pt too wide) in paragraph at lines 374--387
+[][][][] 
+ []
+
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 406--409
 []\JY1/mc/m/n/10 赤坂玲音\OT1/cmr/m/n/10 , \JY1/mc/m/n/10 読本 \OT1/cmr/m/n/10 Java 2011/11/14 \JY1/mc/m/n/10 毎日コミ ュニケ ーシ ョンズ
  []
 
-[15
+[17
 
 ] (./wisdom_java.aux) ) 
 Here is how much of TeX's memory you used:
  3428 strings out of 492760
  42366 string characters out of 6140122
- 109873 words of memory out of 5000000
+ 112873 words of memory out of 5000000
  7863 multiletter control sequences out of 15000+600000
  22106 words of font info for 103 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 30i,8n,36p,280b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,9n,36p,280b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on wisdom_java.dvi (15 pages, 27628 bytes).
+Output written on wisdom_java.dvi (17 pages, 35716 bytes).

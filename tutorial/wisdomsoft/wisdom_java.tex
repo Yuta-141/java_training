@@ -123,7 +123,7 @@ Javaの開発環境JDK(Java Development Kit)はSun MicrosystemsのWebサイト�
     \item XML,サウンド、イメージなどの高度な入出力をサポートするAPIが新たに実装。
     \item 今後はゲーム開発、音楽編集、動画関連ソフトウェアにも期待
 \end{itemize}
-現在もJavaは安定しているとは言えず、改良と拡張を繰り返してJavaha進化し続けている。
+現在もJavaは安定しているとは言えず、改良と拡張を繰り返してJavaは進化し続けている。
 
 \subsection{Javaを学ぶ}
 オブジェクト指向型言語であるJavaはプログラムの流れでなく、部品としての役割を重視して目的のソフトウェアを構築していく。
@@ -140,7 +140,7 @@ Javaプラットフォーム専用のアプリケーションを開発するた�
 JavaにとってはJavaバイトコードこそが機械語であり実行データ。
 
 Javaバイトコードを生成するためには、C/C++言語などによる開発と同様、高水準言語を用いて開発する方法が用いられる。
-Javaバイトコードを生成するための戦勝の高水準言語がJava言語。
+Javaバイトコードを生成するための専用の高水準言語がJava言語。
 Java言語のコンパイラはJDKに付属している。
 \chapter{初めてのJava言語}
 \section{初めてのJava言語}
@@ -312,7 +312,93 @@ Java言語ではソースの可読性を高めるために変数の識別子に�
         String & s \\ \hline
     \end{tabular} 
 \end{table}
+\section{リテラル}
+\subsection{整数リテラル}
+リテラル：そのままの値のトークン,10,"Kitty"など
+リテラルの値はコンパイル時に確定し、実行中に変化することはない。
+
+とはいうものの、実は変数と同時にリテラルにも型が存在する。
+意味は変数リテラルかだけの違いであり、型の考え方は全く同じ。
+リテラルを変数に保存する場合、型が一致しなければならない。
+
+小数点を含まない数字は\textbf{整数リテラル}と呼ばれ、整数型の変数に代入することができる。
+iValue = 10という文では、整数リテラルはint型として認識されている。
+
+$2^{31}$以上の数値を表現したい時はint型では不十分。
+long型の整数リテラルを記述するためには、数字の末尾にlまたはLを付加する。
+(小文字のlは1と誤認しやすいのでLを使うべきと考えられている。)
+long型では$2^{63}$までの値を表現することが可能。
+
+\subsection{浮動小数点数リテラル}
+floatやdouble型の定数は\textbf{浮動小数点数リテラル}と呼ばれ、整数部、小数点、小数部、指数部、型接尾辞
+で構成される。
+\begin{lstlisting}
+    整数部　. 小数部 E 指数部　型接尾辞
+\end{lstlisting}
+浮動小数点数リテラルは、整数リテラルとは異なり、10進数でのみ表記できる。
+
+浮動小数点数リテラルもまた、型接尾辞を指定することでfloat型なのかdouble型なのかを
+区別することができる。float型はfまたはF、double型はdまたはDを末尾につける。
+接尾辞がないときはdouble型であると解釈される。
+
+\subsection{文字と文字列リテラル}
+Javaでは文字がUnicodeとして扱われる。C言語のchar型変数はASCII文字を表すための１バイトだったが、
+Java言語のchar型は２バイトであることに注意。
+
+char型で表現できる１つのUnicode文字を\textbf{文字リテラル}と呼ぶ。
+文字と文字列は異なることに注意。
+\begin{itemize}
+    \item 文字...一つのUnicode
+    \item 文字列...複数の文字の並び
+\end{itemize}
+文字リテラルは'で囲む。
+
+char型に整数リテラルを代入できる理由は、char型が整数型に分類されることから理由づけされる。
+print()およびprintln()メソッドはchar型のデータを受け取るとそれを文字として表示する性質がある。
+逆も可能で、
+\begin{lstlisting}
+    int iValue = `猫';
+\end{lstlisting}
+iValueにはUnicode文字'猫'を示すコード
+0x732Bが格納される。
+
+\subsection{エスケープ・シーケンス}
+文字や文字列リテラルは、引用符の間で改行することはできない。
+改行を表現したい場合、文字列リテラルの中に二重引用符や水平タブを使いたい場合も同様。
+
+このように文字としては表現が難しい「'」「"」のような記号、表示できない文字などを表現したい場合は
+\textbf{エスケープ・シーケンス}を使う。
+エスケープ・シーケンスはバックスラッシュ\textbackslash ( \textbackslash u005C)とそれに続くASCII文字で構成される。
+\begin{table}
+    \caption{エスケープ・シーケンス}
+    \begin{tabular}{|l|l|l|} \hline
+        エスケープ・シーケンス　& Unicode & 意味 \\ \hline
+        \textbackslash b & 0008 & バックスペース \\ \hline
+        \textbackslash t & 0009 & 水平タブ \\ \hline
+        \textbackslash n & 000A & 改行 \\ \hline
+
+        \textbackslash f & 000C & フォーム・フィード \\ \hline
+        \textbackslash r & 000D & 復帰 \\ \hline
+        \textbackslash " & 0022 & 二重引用符 \\ \hline
+        \textbackslash ' & 0027 & 引用符 \\ \hline
+        \textbackslash \textbackslash & 005C & バックスラッシュ \\ \hline
+        \textbackslash XXX & 0000 \~{} 00FF & 00\~{}FFまでの８進数で表現されたコード \\ \hline
+    \end{tabular}
+\end{table}
+エスケープ・シーケンスはこれで１つの文字と解釈されるため、文字リテラルとして指定することも可能。
+Unicodeエスケープとは異なり、コンパイルの軸変換サイクルで処理されるわけではない。
+コンパイラがエスケープ・シーケンスを処理する頃にはすでに\textbackslash uは変換済みであることに注意。
+\subsection{審議リテラル}
+boolean型にはtrueとfalseの二つの値が入る。
+このtrueとfalseを\textbf{審議リテラル}と呼ぶ。
+
+\subsection{nullリテラル}
+変数が保持する情報が存在しないことを示すnull型が存在。
+null型は唯一、nullという値を保持し、ASCII文字を用いた\textbf{nullリテラル}は常にnull型となる。
+nullは数値型の変数に代入することができず、代入できるのは何らかのオブジェクトの位置を表す参照型と呼ばれるタイプの変数だけ。
+
 \begin{thebibliography}{9}
+
 
 \addcontentsline{toc}{chapter}{参考文献}
 
