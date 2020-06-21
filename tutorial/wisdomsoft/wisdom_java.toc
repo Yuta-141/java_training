@@ -35,5 +35,33 @@
 \contentsline {subsection}{\numberline {2.7.4}エスケープ・シーケンス}{xv}%
 \contentsline {subsection}{\numberline {2.7.5}審議リテラル}{xvi}%
 \contentsline {subsection}{\numberline {2.7.6}nullリテラル}{xvi}%
-\contentsline {chapter}{参考文献}{xvii}%
-\contentsline {chapter}{参考文献}{xvii}%
+\contentsline {section}{\numberline {2.8}式と演算}{xvi}%
+\contentsline {subsection}{\numberline {2.8.1}数の計算}{xvi}%
+\contentsline {chapter}{\numberline {第3章}配列}{xix}%
+\contentsline {section}{\numberline {3.1}配列型の変数}{xix}%
+\contentsline {subsection}{\numberline {3.1.1}変数のコレクション}{xix}%
+\contentsline {subsection}{\numberline {3.1.2}main()メソッドのパラメータ}{xx}%
+\contentsline {section}{\numberline {3.2}文字列と文字配列}{xx}%
+\contentsline {subsection}{\numberline {3.2.1}String型}{xx}%
+\contentsline {section}{\numberline {3.3}配列初期化子}{xx}%
+\contentsline {subsection}{\numberline {3.3.1}配列の初期化}{xx}%
+\contentsline {subsection}{\numberline {3.3.2}配列生成式における初期化}{xxi}%
+\contentsline {section}{\numberline {3.4}配列のメンバ}{xxi}%
+\contentsline {subsection}{\numberline {3.4.1}配列の長さを得る}{xxi}%
+\contentsline {section}{\numberline {3.5}配列の配列}{xxi}%
+\contentsline {subsection}{\numberline {3.5.1}配列型の構成要素}{xxi}%
+\contentsline {subsection}{\numberline {3.5.2}配列の配列を初期化する}{xxi}%
+\contentsline {section}{\numberline {3.6}配列宣言の混合表記}{xxi}%
+\contentsline {subsection}{\numberline {3.6.1}型にブラケットを指定する}{xxi}%
+\contentsline {chapter}{\numberline {第4章}例外}{xxiii}%
+\contentsline {section}{\numberline {4.1}例外の発生}{xxiii}%
+\contentsline {subsection}{\numberline {4.1.1}有事の備え}{xxiii}%
+\contentsline {section}{\numberline {4.2}例外のキャッチ}{xxiii}%
+\contentsline {subsection}{\numberline {4.2.1}try文}{xxiii}%
+\contentsline {subsection}{\numberline {4.2.2}fainally ブロック}{xxiv}%
+\contentsline {section}{\numberline {4.3}明示的例外}{xxv}%
+\contentsline {subsection}{\numberline {4.3.1}例外をスローする}{xxv}%
+\contentsline {section}{\numberline {4.4}チェック例外}{xxv}%
+\contentsline {subsection}{\numberline {4.4.1}スロー宣言}{xxv}%
+\contentsline {chapter}{参考文献}{xxvii}%
+\contentsline {chapter}{参考文献}{xxvii}%

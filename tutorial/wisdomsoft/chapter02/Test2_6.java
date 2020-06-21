@@ -1,3 +1,5 @@
+package chapter02;
+
 // コード１
 // class Test2_6{
 //     public static void main(String[] args) {
@@ -25,8 +27,8 @@
 // }
 // コード３
 class Test2_6{
-    public static void main(String[] args) {
-        int iValue = 10,iCount = 100;
+    public static void main(final String[] args) {
+        final int iValue = 10,iCount = 100;
         System.out.println(iValue);
         System.out.println(iCount);
     }

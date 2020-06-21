@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.11.29)  16 JUN 2020 16:56
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.11.29)  21 JUN 2020 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,25 +226,41 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 4.805pt on input line 2.
+
+Overfull \hbox (3.38892pt too wide) detected at line 57
+ \OT1/cmr/m/n/10 xxiii
+ []
+
+
+Overfull \hbox (3.38892pt too wide) detected at line 59
+ \OT1/cmr/m/n/10 xxiii
+ []
+
+
+Overfull \hbox (0.33336pt too wide) detected at line 62
+ \OT1/cmr/m/n/10 xxv
+ []
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 64.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 64.
+[3
+
+]
+Overfull \hbox (0.33336pt too wide) detected at line 64
+ \OT1/cmr/m/n/10 xxv
+ []
+
 )
 \tf@toc=\write3
 \openout3 = `wisdom_java.toc'.
 
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 30.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 30.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 30.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 30.
- [3
-
-] [4
-
-
-
-]
+ [4]
 第1章
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 19.9311pt on input line 38.
@@ -268,7 +284,11 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
- [5] [6] [7] [8]
+ [5
+
+
+
+] [6] [7] [8]
 第2章
 [9
 
@@ -282,21 +302,34 @@ Overfull \hbox (1.0687pt too wide) in paragraph at lines 374--387
 [][][][] 
  []
 
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 406--409
+[15] [16] [17] [18
+
+]
+第3章
+[19] [20] [21] [22]
+第4章
+[23
+
+]
+Overfull \hbox (89.3404pt too wide) in paragraph at lines 552--562
+[][][][] 
+ []
+
+[24] [25] [26
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 615--618
 []\JY1/mc/m/n/10 赤坂玲音\OT1/cmr/m/n/10 , \JY1/mc/m/n/10 読本 \OT1/cmr/m/n/10 Java 2011/11/14 \JY1/mc/m/n/10 毎日コミ ュニケ ーシ ョンズ
  []
 
-[17
-
-] (./wisdom_java.aux) ) 
+[27] (./wisdom_java.aux) ) 
 Here is how much of TeX's memory you used:
- 3428 strings out of 492760
- 42366 string characters out of 6140122
+ 3430 strings out of 492760
+ 42401 string characters out of 6140122
  112873 words of memory out of 5000000
- 7863 multiletter control sequences out of 15000+600000
+ 7865 multiletter control sequences out of 15000+600000
  22106 words of font info for 103 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 30i,9n,36p,280b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,9n,36p,280b,1599s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on wisdom_java.dvi (17 pages, 35716 bytes).
+Output written on wisdom_java.dvi (27 pages, 57768 bytes).
