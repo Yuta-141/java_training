@@ -37,6 +37,8 @@
 \contentsline {subsection}{\numberline {2.7.6}nullリテラル}{xvi}%
 \contentsline {section}{\numberline {2.8}式と演算}{xvi}%
 \contentsline {subsection}{\numberline {2.8.1}数の計算}{xvi}%
+\contentsline {section}{\numberline {2.9}型変換}{xvii}%
+\contentsline {subsection}{\numberline {2.9.1}型の拡張と縮小}{xvii}%
 \contentsline {chapter}{\numberline {第3章}配列}{xix}%
 \contentsline {section}{\numberline {3.1}配列型の変数}{xix}%
 \contentsline {subsection}{\numberline {3.1.1}変数のコレクション}{xix}%

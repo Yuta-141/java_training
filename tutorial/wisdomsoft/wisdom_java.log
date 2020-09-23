@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.11.29)  21 JUN 2020 19:57
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.11.29)  12 SEP 2020 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -227,8 +227,8 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 4.805pt on input line 2.
 
-Overfull \hbox (3.38892pt too wide) detected at line 57
- \OT1/cmr/m/n/10 xxiii
+Overfull \hbox (0.61113pt too wide) detected at line 40
+ \OT1/cmr/m/n/10 xvii
  []
 
 
@@ -237,8 +237,8 @@ Overfull \hbox (3.38892pt too wide) detected at line 59
  []
 
 
-Overfull \hbox (0.33336pt too wide) detected at line 62
- \OT1/cmr/m/n/10 xxv
+Overfull \hbox (3.38892pt too wide) detected at line 61
+ \OT1/cmr/m/n/10 xxiii
  []
 
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
@@ -253,6 +253,11 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 
 ]
 Overfull \hbox (0.33336pt too wide) detected at line 64
+ \OT1/cmr/m/n/10 xxv
+ []
+
+
+Overfull \hbox (0.33336pt too wide) detected at line 66
  \OT1/cmr/m/n/10 xxv
  []
 
@@ -311,14 +316,14 @@ Overfull \hbox (1.0687pt too wide) in paragraph at lines 374--387
 [23
 
 ]
-Overfull \hbox (89.3404pt too wide) in paragraph at lines 552--562
+Overfull \hbox (89.3404pt too wide) in paragraph at lines 562--572
 [][][][] 
  []
 
 [24] [25] [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 615--618
+Underfull \hbox (badness 10000) in paragraph at lines 625--628
 []\JY1/mc/m/n/10 赤坂玲音\OT1/cmr/m/n/10 , \JY1/mc/m/n/10 読本 \OT1/cmr/m/n/10 Java 2011/11/14 \JY1/mc/m/n/10 毎日コミ ュニケ ーシ ョンズ
  []
 
@@ -332,4 +337,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  31i,9n,36p,280b,1599s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on wisdom_java.dvi (27 pages, 57768 bytes).
+Output written on wisdom_java.dvi (27 pages, 58560 bytes).

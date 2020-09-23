@@ -407,6 +407,16 @@ nullは数値型の変数に代入することができず、代入できるの�
 \end{lstlisting}
 このとき、記号=を\textbf{演算子}と呼び、iValueと10のような演算対象を\textbf{オペランド}と呼ぶ。
 
+\section{型変換}
+\subsection{型の拡張と縮小}
+\begin{itemize}
+    \item ナローイング変換(32bit-> 16bit) \quad 情報の破損がありうる変換
+    \item ワイドニング変換(16bit->32bit) \quad 情報が失われることがない変換
+\end{itemize}
+
+
+
+
 \chapter{配列}
 \section{配列型の変数}
 \subsection{変数のコレクション}
@@ -605,7 +615,7 @@ ThrowException()メソッドはException型の例題を呼ぶだし元にスロ�
 ThrowExceptionを呼び出しているmain()メソッドがException例外を取り扱っていないため、
 さらにどの呼び出し元にException例外をスローする可能性があるため、コンパイルエラーとなる。
 
-
+例外がcatchによって取り扱われない場合、メソッドの呼び出
 \begin{thebibliography}{9}
 
 
