@@ -1,0 +1,4 @@
+class FileProperties extends FileIO{
+     
+
+} 
