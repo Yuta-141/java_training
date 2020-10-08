@@ -1,6 +1,6 @@
 class Parent{
     public static class Child{
-        public static String str = "Kitty on your lap";
+       public static String str = "Kitty on your lap";
         public String toString(){
             return super.toString() + " : " + str;
         }
@@ -13,3 +13,5 @@ class Test{
         System.out.println(obj);
     }
 }
+
+        
