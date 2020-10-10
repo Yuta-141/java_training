@@ -1,19 +1,35 @@
 import java.util.Properties;
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 
-class FileProperties extends Properties{
+class FileProperties extends Properties implements FileIO{
     private Properties fileProperties = new Properties();
     public void readFromFile(String filename) { 
-        load(filename);
+		try{
+			InputStream readFile = new FileInputStream(filename);
+        	fileProperties.load(readFile);
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
     }
+
     public void writeToFile(String filename){
-        store(out,header,this.fileProperties);
+		try{
+			OutputStream out = new FileOutputStream(filename);
+       		store(out,this.fileProperties.toString());
+		} catch(Exception e){
+			e.printStackTrace();
+		}
     }
     public void setValue(String key,String value){
 //        this.fileProperties = key + "=" + value;
         this.fileProperties.setProperty(key,value);
     }
     public String getValue(String key){
-        return getProperty(key);
+        return fileProperties.getProperty(key);
     }
      
 
