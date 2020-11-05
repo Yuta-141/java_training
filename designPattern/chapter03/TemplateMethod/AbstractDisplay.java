@@ -5,7 +5,7 @@ public abstract class AbstractDisplay{// 抽象クラスAbstractDisplay
     public final void display(){// この抽象クラスで実装しているメソッドdisplay
         open(); //まずopen
         for(int i=0; i<5; i++){ // 5 times print
-            printf();
+            print();
         }
         close();  // finally close. これがdisplayメソッドで実装されている内容
 
